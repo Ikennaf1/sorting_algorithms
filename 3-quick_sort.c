@@ -29,10 +29,13 @@ void quick_sort_alg(int *array, int lb, int ub, size_t size)
  * @ub: Upper bound
  * Return: Index location of partition
  */
-unsigned int partition(int *array, int lb, int ub, __attribute__((unused)) size_t size)
+unsigned int partition(int *array, int lb, int ub, size_t size)
 {
 	int pivot = array[lb], temp;
 	int start = lb, end = ub;
+
+	if (ub == size)
+		;
 
 	while (start < end)
 	{
