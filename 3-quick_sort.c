@@ -14,15 +14,12 @@ void quick_sort_alg(int *array, int lb, int ub, size_t size)
 
 	if (lb < ub)
 	{
-		/*print_array(array, size);*/
 		loc = partition (array, lb, ub, size);
 		quick_sort_alg(array, lb, loc - 1, size);
-		/*print_array(array, size);*/
 		quick_sort_alg(array, loc + 1, ub, size);
-		/*print_array(array, size);*/
 	}
-	/*if (array[lb] < array[ub])*/
-		/*print_array(array, size);*/
+	if (array[lb] < array[ub])
+		print_array(array, size);
 }
 
 /**
@@ -49,17 +46,11 @@ unsigned int partition(int *array, int lb, int ub, __attribute__((unused)) size_
 			temp = array[start];
 			array[start] = array[end];
 			array[end] = temp;
-			/*print_array(array, size);*/
 		}
-		/*print_array(array, size);*/
 	}
-	print_array(array, size);
 	temp = array[lb];
 	array[lb] = array[end];
 	array[end] = temp;
-
-	/*if (end != array[lb])*/
-		/*print_array(array, size);*/
 
 	return (end);
 }

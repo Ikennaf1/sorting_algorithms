@@ -26,5 +26,6 @@ void selection_sort(int *array, size_t size);
 unsigned int partition(int *array, int lb, int ub, size_t size);
 void quick_sort_alg(int *array, int lb, int ub, size_t size);
 void quick_sort(int *array, size_t size);
+void shell_sort(int *array, size_t size);
 
 #endif /* _SORT_H_ */
