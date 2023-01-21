@@ -14,7 +14,7 @@ void quick_sort_alg(int *array, int lb, int ub, size_t size)
 
 	if (lb < ub)
 	{
-		loc = partition (array, lb, ub, size);
+		loc = partition(array, lb, ub, size);
 		quick_sort_alg(array, lb, loc - 1, size);
 		quick_sort_alg(array, loc + 1, ub, size);
 	}
