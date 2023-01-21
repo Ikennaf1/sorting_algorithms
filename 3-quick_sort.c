@@ -34,7 +34,7 @@ unsigned int partition(int *array, int lb, int ub, size_t size)
 	int pivot = array[lb], temp;
 	int start = lb, end = ub;
 
-	if (ub == size)
+	if (array[size] == array[ub])
 		;
 
 	while (start < end)
