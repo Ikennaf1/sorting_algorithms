@@ -20,7 +20,6 @@ void counting_sort(int *array, size_t size)
 			k = array[i];
 	}
 	k++;
-
 	count = (int *) malloc(sizeof(int) * k);
 	if (count == NULL)
 		return;
@@ -48,4 +47,5 @@ void counting_sort(int *array, size_t size)
 			j++;
 		}
 	}
+	free(count);
 }
